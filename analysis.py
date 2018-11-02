@@ -1,3 +1,4 @@
 import json
-with open('yelp_academic_dataset_review.json') as f:
+fn = 'yelp_dataset/yelp_academic_dataset_business.json'
+with open(fn, encoding='utf8') as f:
     data = json.load(f)
