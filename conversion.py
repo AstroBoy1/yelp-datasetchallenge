@@ -12,7 +12,7 @@ import simplejson as json
 
 def read_and_write_file(json_file_path, csv_file_path, column_names):
     """Read in the json dataset file and write it out to a csv file, given the column names."""
-    count = 0
+    # count = 0
     with open(csv_file_path, 'w', newline='') as fout:
         csv_file = csv.writer(fout)
         csv_file.writerow(list(column_names))
@@ -20,12 +20,18 @@ def read_and_write_file(json_file_path, csv_file_path, column_names):
             for index, line in enumerate(fin):
                 print(index)
                 line_contents = json.loads(line)
-                print("Json contents:", line_contents)
-                print("CSV contents:", get_row(line_contents, column_names))
-                count += 1
-                if count > 2:
-                    break
-                csv_file.writerow(get_row(line_contents, column_names))
+                # print("Json contents:", line_contents)
+                # print("CSV contents:", get_row(line_contents, column_names))
+                # count += 1
+                # if count > 2:
+                #     break
+                s = get_row(line_contents, column_names)
+                s = [val.encode('unicode_escape').decode() if isinstance(val, str) else val for val in s]
+                try:
+                    csv_file.writerow(s)
+                except UnicodeEncodeError:
+                    print(s)
+                    print("Unicode Error")
 
 
 def get_superset_of_column_names_from_file(json_file_path):
@@ -107,8 +113,8 @@ def get_row(line_contents, column_names):
             line_contents,
             column_name,
         )
-        print("Column name", column_name)
-        print("Line value", line_value)
+        # print("Column name", column_name)
+        # print("Line value", line_value)
         row.append(line_value)
         # if isinstance(line_value, str):
         #     row.append('{0}'.format(line_value.encode('utf-8')))
@@ -136,7 +142,7 @@ if __name__ == '__main__':
     # args = parser.parse_args()
     #
     # json_file = args.json_file
-    json_file = "yelp_academic_dataset_business.json"
+    json_file = "yelp_dataset/yelp_academic_dataset_business.json"
     csv_file = '{0}.csv'.format(json_file.split('.json')[0])
 
     column_names = get_superset_of_column_names_from_file(json_file)
