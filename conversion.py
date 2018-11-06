@@ -8,6 +8,7 @@ import argparse
 import collections
 import csv
 import simplejson as json
+import sys, getopt
 
 
 def read_and_write_file(json_file_path, csv_file_path, column_names):
@@ -125,6 +126,26 @@ def get_row(line_contents, column_names):
     return row
 
 
+def main(argv):
+    json_file = "yelp_dataset/yelp_academic_dataset_business.json"
+    try:
+        opts, args = getopt.getopt(argv, "hi:", ["ifile="])
+    except getopt.GetoptError:
+        print('conversion.py -i <inputfile>')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print('test.py -i <inputfile> -o <outputfile>')
+            sys.exit()
+        elif opt in ("-i", "--ifile"):
+            json_file = arg
+
+    csv_file = '{0}.csv'.format(json_file.split('.json')[0])
+
+    column_names = get_superset_of_column_names_from_file(json_file)
+    read_and_write_file(json_file, csv_file, column_names)
+
+
 if __name__ == '__main__':
     """Convert a yelp dataset file from json to csv."""
     """TODO: Convert all the json files"""
@@ -142,8 +163,4 @@ if __name__ == '__main__':
     # args = parser.parse_args()
     #
     # json_file = args.json_file
-    json_file = "yelp_dataset/yelp_academic_dataset_business.json"
-    csv_file = '{0}.csv'.format(json_file.split('.json')[0])
-
-    column_names = get_superset_of_column_names_from_file(json_file)
-    read_and_write_file(json_file, csv_file, column_names)
+    main(sys.argv[1:])
