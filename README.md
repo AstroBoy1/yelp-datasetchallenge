@@ -11,21 +11,6 @@ Can we use GIS data, such as this dataset for Hawaii, to identify areas that hav
 Is there such a thing as a “local” diner review for highly trafficked tourist areas like Waikiki and other similar heavily “touristed” areas in San Francisco, Chicago, Los Angeles, New York, Houston, Philadelphia, Phoenix, San Antonio, San Diego, Dallas, and San Jose? 
 For restaurants which exist in low density review areas (to be determined after an examination of the data), are there differences in users which review said restaurants or in the content of the reviews? In other words, why might some more rural restaurants get more review traffic than others?
 
-Deliverables
-Project proposal (posted to slack) is due on Nov 1, 2018.
-Jupyter Notebook (ipynb file) describing your work due on Dec 12, 2018.
-Any additional scripts you have used outside of the Python/Jupyter environment
-A 10-minute video presentation of your work (posted to youtube as unlisted video and submit the link to laulima)
-In-class presentation of the video with live Q & A (Dec 4 & 5, 2018)
-Project proposals must include
-title
-names of project members
-brief description of the data set(s) analyzed
-initial list of questions to investigate
-You should organize your notebook so that the main narrative comes first with additional appendixes giving details. Think of the main narrative as a short 4-6 page article/paper that tells the “story”.
-For those who have problems running the processing within Jupyter Notebook, you may run the heavy lifting python code outside of Jupyter Notebook, but you must write up your work in Jupyter Notebook for submission.
-Do not submit the data set with your submission, but you need to submit any code/scripts needed to reproduce your analysis.
-
 Technical Plan
 Language: Python
 Data format: JSON
