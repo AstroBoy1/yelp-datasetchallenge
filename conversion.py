@@ -19,7 +19,7 @@ def read_and_write_file(json_file_path, csv_file_path, column_names):
         csv_file.writerow(list(column_names))
         with open(json_file_path, encoding='utf-8') as fin:
             for index, line in enumerate(fin):
-                print(index)
+                # print(index)
                 line_contents = json.loads(line)
                 # print("Json contents:", line_contents)
                 # print("CSV contents:", get_row(line_contents, column_names))
@@ -127,7 +127,8 @@ def get_row(line_contents, column_names):
 
 
 def main(argv):
-    json_file = "yelp_dataset/yelp_academic_dataset_business.json"
+    # json_file = "yelp_dataset/yelp_academic_dataset_business.json"
+    json_file = "yelp_dataset/yelp_academic_dataset_photo.json"
     try:
         opts, args = getopt.getopt(argv, "hi:", ["ifile="])
     except getopt.GetoptError:
@@ -144,6 +145,7 @@ def main(argv):
 
     column_names = get_superset_of_column_names_from_file(json_file)
     read_and_write_file(json_file, csv_file, column_names)
+    print("Finished", json_file)
 
 
 if __name__ == '__main__':
