@@ -50,20 +50,6 @@ Bibliography
 "CORALS: Who are My Potential New Customers? Tapping into the Wisdom of Customers' Decisions" by Ruirui Li, Chelsea J-T Ju, Jyunyu Jiang, and Wei Wang from the Department of Computer Science of the University of California in Los Angeles.
 "Clustered Model Adaption for Personalized Sentiment Analysis" by Lin Gong, Benjamin Haines, and Hongnin Wang from the Department of Computer Science of the University of Virginia.
 
-Tentative Schedule
-11/1: proposal
-11/6: understanding of the data and how to use it, infrastructure and workflow set up
-Michael will email Crystal a zoom meeting request
-Rethink some questions
-Try to play with data on a local computer
-
-
-11/13: initial analysis
-11/20: further analysis
-11/27: Create nice visuals and script way to “tell a story”
-12/4-5: video presentation, Q&A
-12/12: Jupyter notebook
-
 Success Criteria
 The questions may be difficult to answer, but we should at least shine light onto the questions and enhance people’s understandings.
 
