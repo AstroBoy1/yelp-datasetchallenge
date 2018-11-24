@@ -8,11 +8,10 @@ import numpy as np
 from numpy import linalg as LA
 from flair.embeddings import WordEmbeddings
 from flair.data import Sentence
-
+import matplotlib.pyplot as plt
 
 # ## TODO: analyze users, analyze everything specifically for Arizona, function modularity
 
-# ## Read JSON Data
 
 def similarity(t1, t2, glove_embedding):
     glove_embedding.embed(t1)
@@ -49,17 +48,12 @@ def analyze_checkin(geo_restaurants_df, write=True):
 
     c = 0
     num_rows = len(df_checkin_AZ_restaurants)
-    num_rows = 100
+    # num_rows = 100
     for i in range(0, num_rows):
         time_checkins = df_checkin_AZ_restaurants['time'][i]
-        # print(time_checkins)
         for k, v in time_checkins.items():
-            print("\n", "Key:", k)
-            print("Value:", v)
             day_count = k.split('-')
-            print("Day count:", day_count)
             time_counts_az[int(day_count[1])] += v
-            print(int(day_count[1]))
             day_counts_az[day_count[0]] += v
 
     c = 0
@@ -75,7 +69,6 @@ def analyze_checkin(geo_restaurants_df, write=True):
     print("Day counts", day_counts)
     print("time counts", time_counts)
 
-
     # ## Checkins are higher on weekends
     # ## Lowest on Tuesdays
     day_counts_df = pd.DataFrame()
@@ -83,55 +76,60 @@ def analyze_checkin(geo_restaurants_df, write=True):
     day_counts_df['counts'] = day_counts.values()
     sns.set(style="whitegrid")
     ax = sns.barplot(x="day", y="counts", data=day_counts_df)
-
+    figure = ax.get_figure()
+    figure.savefig("output/checkins.png")
 
     # ## Arizona restaurant checkins each day
+    plt.clf()
     az_day_counts_df = pd.DataFrame()
     az_day_counts_df['day'] = day_counts_az.keys()
     az_day_counts_df['counts'] = day_counts_az.values()
     sns.set(style="whitegrid")
     ax = sns.barplot(x="day", y="counts", data=az_day_counts_df)
-
+    figure = ax.get_figure()
+    figure.savefig("output/AZ_checkins.png")
 
     # ## Number of checkins at restaruants through the day
+    plt.clf()
     time_counts_df = pd.DataFrame()
     time_counts_df['time'] = time_counts.keys()
     time_counts_df['counts'] = time_counts.values()
     sns.set(style="whitegrid")
     ax = sns.barplot(x="time", y="counts", data=time_counts_df)
-
+    figure = ax.get_figure()
+    figure.savefig("output/time_counts.png")
 
     # ## Arizona restaurant checkins through the day
+    plt.clf()
     time_counts_df_az = pd.DataFrame()
     time_counts_df_az['time'] = time_counts_az.keys()
     time_counts_df_az['counts'] = time_counts_az.values()
     sns.set(style="whitegrid")
     ax = sns.barplot(x="time", y="counts", data=time_counts_df_az)
+    figure = ax.get_figure()
+    figure.savefig("output/AZ_time_counts.png")
 
     print("Time counts", time_counts)
+    print("Finished analyzing checkin data")
 
 
-def analyze_business(write=False):
+def analyze_business(write=False, load=False):
     glove_embedding = WordEmbeddings('glove')
 
     df = pd.read_json("yelp_dataset/yelp_academic_dataset_business.json", lines=True)
     print(df.head)
-
     print(len(df))
 
     # ## Arizona businesses comprise about 1/3 of the dataset
     # ## Why?
 
     arizona_df = df[df['state'] == "AZ"]
-    len(arizona_df)
-
+    print("Number of rows", len(arizona_df))
 
     # ## What are all of the food related words?
     # ## Use Glove word embeddings as a proxy
 
     restaurant_score = []
-
-    food = Sentence("food")
     restaurant_words = ["food", "cafe", "restaurants", "coffee", "drinks", "beer", "bar"]
     bar_words = ["beer", "bar", "bars", "brew"]
     bar_df = pd.DataFrame()
@@ -148,31 +146,33 @@ def analyze_business(write=False):
                 if word in t:
                     bar_indices.append(i)
 
-    len(bar_indices)
+    print("Number of bars", len(bar_indices))
 
     # ## 36k Bars and breweries
 
-    len(bar_indices) / len(df)
+    print("Percentage of bars", len(bar_indices) / len(df))
 
     bars_df = df.iloc[bar_indices]
 
     # ## 20% of the businesses are bars
 
-    for i in range(0, len(df)):
-        best_score = 0
-        score = 0
-        if df['categories'][i]:
-            for t in df['categories'][i].split(","):
-                text = Sentence(t)
-                glove_embedding.embed(text)
-                for rwo in restaurant_words_objects:
-                    score = similarity(rwo, text)
-                    best_score = max(best_score, score)
-        restaurant_score.append(best_score)
-    df['restaurant'] = restaurant_score
+    # for i in range(0, len(df)):
+    #     best_score = 0
+    #     score = 0
+    #     if df['categories'][i]:
+    #         for t in df['categories'][i].split(","):
+    #             text = Sentence(t)
+    #             glove_embedding.embed(text)
+    #             for rwo in restaurant_words_objects:
+    #                 score = similarity(rwo, text, glove_embedding)
+    #                 best_score = max(best_score, score)
+    #     restaurant_score.append(best_score)
+    # df['restaurant'] = restaurant_score
     if write:
         df.to_csv("restaurants.csv")
 
+    if load:
+        df = pd.read_csv("restaurants.csv")
     df.sort_values(by=['restaurant'], ascending=False)
 
     if write:
@@ -181,23 +181,18 @@ def analyze_business(write=False):
     # ## Arizona restaurants
 
     yelp_restaurants_df = pd.read_csv("yelp_restaurants.csv")
-
     az_restaurants_df = yelp_restaurants_df[yelp_restaurants_df['state'] == 'AZ']
     if write:
         az_restaurants_df.to_csv("AZ_restaurants.csv")
-
-    len(az_restaurants_df)
-
+    print("Number of Arizona restaurants", len(az_restaurants_df))
     az_bars_df = bars_df[bars_df['state'] == 'AZ']
     if write:
         az_bars_df.to_csv("AZ_bars.csv")
-
-    len(az_bars_df)
+    print("Number of Arizona bars", len(az_bars_df))
 
     # ## Half the restaurants are bars in Arizona
 
     az_restaurants_df.head()
-
 
     # ## About 1/3 of Arizona businesses are restaurants in this dataset
 
@@ -208,35 +203,29 @@ def analyze_business(write=False):
     #     print(token)
     #     print(token.embedding)
 
-
     # ## Where are the businesses located?
 
     food_columns = df[df['categories'].str.contains("Food")==True]
     print("Number of restaurants", len(food_columns))
-    df['city'].value_counts()
-
+    print("City counts", df['city'].value_counts())
 
     # ## Count of restaurants and count of total businesses
 
     restaurants_df = df[df['restaurant'] >= 1]
-
     print("Number of restaurants", len(restaurants_df))
-
     print("Number of businesses", len(df))
-
     print("Percentage of businesses that are restaurants", len(restaurants_df) / len(df))
-
 
     # ## 15 % of the businesses are restaurants
     # ## Most are located in Toronto, Las Vegas, and Phoenix
     restaurants_df['city'].value_counts()
+    print("Finished analyzing business data")
     return az_restaurants_df
 
 
-def analyze_reviews(write=False):
+def analyze_reviews(write=False, fn="yelp_gcs/yelp_academic_dataset_review.csv"):
     cs = 100000
     count = 0
-    fn = "yelp_gcs/yelp_academic_dataset_review.csv"
     stars = {x: 0 for x in range(0, 6)}
     for chunk in pd.read_csv(fn, chunksize=cs):
         count += cs
@@ -255,16 +244,21 @@ def analyze_reviews(write=False):
     star_counts_df['counts'] = stars.values()
     sns.set(style="whitegrid")
     ax = sns.barplot(x="stars", y="counts", data=star_counts_df)
+    ax.savefig("reviews.png")
+    print("Finished analyzing reviews")
 
 
 def analyze_users(write=False):
+    print("Finished analyzing users")
     pass
 
 
 def main():
-    az_restaurants_df = analyze_business(write=False)
+    """TODO: Look at how many people are elite yelpers"""
+    az_restaurants_df = analyze_business(write=False, load=True)
     analyze_checkin(az_restaurants_df, write=False)
-    analyze_reviews(write=False)
+    # Reviews is pretty large
+    # analyze_reviews(write=False, fn="yelp_academic_dataset_review.csv")
     analyze_users(write=False)
 
 
