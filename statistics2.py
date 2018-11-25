@@ -9,8 +9,8 @@ from numpy import linalg as LA
 from flair.embeddings import WordEmbeddings
 from flair.data import Sentence
 import matplotlib.pyplot as plt
-
-# ## TODO: analyze users, analyze everything specifically for Arizona, function modularity
+import csv
+import xgboost as xgb
 
 
 def similarity(t1, t2, glove_embedding):
@@ -248,18 +248,90 @@ def analyze_reviews(write=False, fn="yelp_gcs/yelp_academic_dataset_review.csv")
     print("Finished analyzing reviews")
 
 
-def analyze_users(write=False):
-    print("Finished analyzing users")
+def stars_checkins():
+    with open('yelp_academic_dataset_checkin.csv', newline='') as f:
+        reader = csv.reader(f)
+        row_count = sum(1 for row in reader)
+        print(row_count)
+        # 157076 rows
+    pass
+
+
+def pred_stars():
+    # 5 stars possible, 1-5
+    # Don't use one hot encoding for targets, but might need to for features
+    """neighborhood, city, state, attributes, categories, hours. Might need to convert everything into categorical.
+    labelencoder - onehot
+    1. https://xgboost.readthedocs.io/en/latest/python/python_intro.html
+    2. https://machinelearningmastery.com/data-preparation-gradient-boosting-xgboost-python/
+    3. https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html
+    4. https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
+    """
+
+    names = list(df_features.columns)
+
+    split = round(0.2 * len(x_train_scaled))
+    x_val = x_train_scaled[:split]
+    y_val = y_train[:split]
+    x_train2 = x_train_scaled[split:]
+    y_train2 = y_train[split:]
+
+    x_train2 = pd.DataFrame(x_train2, columns=names)
+    dtrain = xgb.DMatrix(x_train2, label=y_train2)
+    x_test_scaled = pd.DataFrame(x_test_scaled, columns=names)
+    dtest = xgb.DMatrix(x_test_scaled)
+
+    param = {'max_depth': 20, 'eta': 0.1, 'silent': 1, 'objective': 'multi:softprob'}
+    param['nthread'] = 4
+    param['eval_metric'] = 'mlogloss'
+    param['num_class'] = 5
+
+    x_val = pd.DataFrame(x_val, columns=names)
+    dval = xgb.DMatrix(x_val, label=y_val)
+    evallist = [(dval, 'eval'), (dtrain, 'train')]
+
+    num_round = 100
+    bst = xgb.train(param, dtrain, num_round, evallist)
+
+    bst.save_model('xgboost.model')
+    # make predictions for test data
+    bst = xgb.Booster({'nthread': 4})  # init model
+    try:
+        bst.load_model('xgboost.model')  # load data
+    except:
+        print("couldn't load model")
+    y_pred = bst.predict(dtest)
+    # I take the highest probability for each class prediction for each example as the prediction.
+    predictions = []
+    true = list(y_test)
+    for i in range(len(y_pred)):
+        predictions.append(np.argmax(y_pred[i]))
+    # evaluate predictions
+    accuracy = 0
+    for i in range(len(predictions)):
+        if predictions[i] == true[i]:
+            accuracy += 1
+    print(accuracy / len(predictions))
+
+    # Plotting
+    ax = xgb.plot_importance(bst)
+    fig = ax.figure
+    fig.set_size_inches(10, 10)
+
+
+def review_count_analysis():
     pass
 
 
 def main():
-    """TODO: Look at how many people are elite yelpers"""
+    """TODO: Sunday: Predicting stars and # of reviews as a classification task and regression. XGBoost
+    Monday: What makes restaurants with high/low stars different?
+    Tuesday: Categorical plot of stars and check-ins
+    Features: neighborhood, city, state, attributes, categories, hours"""
     az_restaurants_df = analyze_business(write=False, load=True)
     analyze_checkin(az_restaurants_df, write=False)
     # Reviews is pretty large
     # analyze_reviews(write=False, fn="yelp_academic_dataset_review.csv")
-    analyze_users(write=False)
 
 
 if __name__ == "__main__":
