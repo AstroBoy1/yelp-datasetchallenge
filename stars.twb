@@ -1,0 +1,1733 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20183.18.1018.1932                               -->
+<workbook original-version='18.1' source-build='2018.3.0 (20183.18.1018.1932)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='yelp_academic_dataset_business (business)' inline='true' name='federated.1gbigui1i1tmb31dl4bql1ckvk3k' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='business' name='excel-direct.002eq850u0pexx1afwkk410e5qz1'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/Michael/PycharmProjects/Yelp/yelp_dataset/business.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.002eq850u0pexx1afwkk410e5qz1' name='yelp_academic_dataset_business' table='[yelp_academic_dataset_business$]' type='table'>
+          <columns gridOrigin='A1:BI10001:no:A1:BI10001:0' header='yes' outcome='2'>
+            <column datatype='string' name='neighborhood' ordinal='0' />
+            <column datatype='string' name='hours' ordinal='1' />
+            <column datatype='string' name='state' ordinal='2' />
+            <column datatype='real' name='longitude' ordinal='3' />
+            <column datatype='string' name='address' ordinal='4' />
+            <column datatype='boolean' name='attributes.DogsAllowed' ordinal='5' />
+            <column datatype='boolean' name='attributes.Open24Hours' ordinal='6' />
+            <column datatype='string' name='categories' ordinal='7' />
+            <column datatype='boolean' name='attributes.BusinessAcceptsCreditCards' ordinal='8' />
+            <column datatype='string' name='attributes.WiFi' ordinal='9' />
+            <column datatype='boolean' name='attributes.GoodForDancing' ordinal='10' />
+            <column datatype='boolean' name='attributes.RestaurantsDelivery' ordinal='11' />
+            <column datatype='string' name='name' ordinal='12' />
+            <column datatype='integer' name='review_count' ordinal='13' />
+            <column datatype='boolean' name='attributes.BikeParking' ordinal='14' />
+            <column datatype='string' name='attributes.Ambience' ordinal='15' />
+            <column datatype='string' name='hours.Wednesday' ordinal='16' />
+            <column datatype='string' name='hours.Friday' ordinal='17' />
+            <column datatype='string' name='hours.Monday' ordinal='18' />
+            <column datatype='string' name='attributes.Smoking' ordinal='19' />
+            <column datatype='string' name='attributes.RestaurantsAttire' ordinal='20' />
+            <column datatype='integer' name='is_open' ordinal='21' />
+            <column datatype='string' name='attributes.BestNights' ordinal='22' />
+            <column datatype='string' name='postal_code' ordinal='23' />
+            <column datatype='integer' name='attributes.RestaurantsPriceRange2' ordinal='24' />
+            <column datatype='boolean' name='attributes.HappyHour' ordinal='25' />
+            <column datatype='boolean' name='attributes.RestaurantsReservations' ordinal='26' />
+            <column datatype='boolean' name='attributes.WheelchairAccessible' ordinal='27' />
+            <column datatype='string' name='attributes.GoodForMeal' ordinal='28' />
+            <column datatype='boolean' name='attributes.RestaurantsCounterService' ordinal='29' />
+            <column datatype='boolean' name='attributes.GoodForKids' ordinal='30' />
+            <column datatype='boolean' name='attributes.RestaurantsGoodForGroups' ordinal='31' />
+            <column datatype='boolean' name='attributes.RestaurantsTableService' ordinal='32' />
+            <column datatype='string' name='attributes' ordinal='33' />
+            <column datatype='real' name='stars' ordinal='34' />
+            <column datatype='boolean' name='attributes.BusinessAcceptsBitcoin' ordinal='35' />
+            <column datatype='real' name='latitude' ordinal='36' />
+            <column datatype='boolean' name='attributes.HasTV' ordinal='37' />
+            <column datatype='boolean' name='attributes.RestaurantsTakeOut' ordinal='38' />
+            <column datatype='string' name='business_id' ordinal='39' />
+            <column datatype='string' name='hours.Sunday' ordinal='40' />
+            <column datatype='string' name='attributes.HairSpecializesIn' ordinal='41' />
+            <column datatype='string' name='hours.Saturday' ordinal='42' />
+            <column datatype='string' name='city' ordinal='43' />
+            <column datatype='string' name='attributes.NoiseLevel' ordinal='44' />
+            <column datatype='boolean' name='attributes.BYOB' ordinal='45' />
+            <column datatype='boolean' name='attributes.ByAppointmentOnly' ordinal='46' />
+            <column datatype='boolean' name='attributes.AcceptsInsurance' ordinal='47' />
+            <column datatype='boolean' name='attributes.Caters' ordinal='48' />
+            <column datatype='string' name='hours.Thursday' ordinal='49' />
+            <column datatype='string' name='attributes.Alcohol' ordinal='50' />
+            <column datatype='string' name='attributes.Music' ordinal='51' />
+            <column datatype='boolean' name='attributes.DriveThru' ordinal='52' />
+            <column datatype='string' name='hours.Tuesday' ordinal='53' />
+            <column datatype='string' name='attributes.BusinessParking' ordinal='54' />
+            <column datatype='boolean' name='attributes.CoatCheck' ordinal='55' />
+            <column datatype='boolean' name='attributes.Corkage' ordinal='56' />
+            <column datatype='string' name='attributes.AgesAllowed' ordinal='57' />
+            <column datatype='string' name='attributes.DietaryRestrictions' ordinal='58' />
+            <column datatype='string' name='attributes.BYOBCorkage' ordinal='59' />
+            <column datatype='boolean' name='attributes.OutdoorSeating' ordinal='60' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>neighborhood</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[neighborhood]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>neighborhood</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hours</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hours]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>hours</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>address</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[address]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>address</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.DogsAllowed</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.DogsAllowed]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.DogsAllowed</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.Open24Hours</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.Open24Hours]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.Open24Hours</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>categories</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[categories]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>categories</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.BusinessAcceptsCreditCards</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.BusinessAcceptsCreditCards]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.BusinessAcceptsCreditCards</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.WiFi</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.WiFi]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.WiFi</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.GoodForDancing</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.GoodForDancing]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.GoodForDancing</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.RestaurantsDelivery</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.RestaurantsDelivery]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.RestaurantsDelivery</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>review_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[review_count]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>review_count</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.BikeParking</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.BikeParking]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.BikeParking</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.Ambience</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.Ambience]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.Ambience</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hours.Wednesday</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hours.Wednesday]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>hours.Wednesday</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hours.Friday</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hours.Friday]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>hours.Friday</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hours.Monday</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hours.Monday]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>hours.Monday</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.Smoking</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.Smoking]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.Smoking</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.RestaurantsAttire</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.RestaurantsAttire]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.RestaurantsAttire</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_open</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_open]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>is_open</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.BestNights</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.BestNights]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.BestNights</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>postal_code</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[postal_code]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>postal_code</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.RestaurantsPriceRange2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[attributes.RestaurantsPriceRange2]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.RestaurantsPriceRange2</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.HappyHour</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.HappyHour]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.HappyHour</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.RestaurantsReservations</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.RestaurantsReservations]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.RestaurantsReservations</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.WheelchairAccessible</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.WheelchairAccessible]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.WheelchairAccessible</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.GoodForMeal</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.GoodForMeal]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.GoodForMeal</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.RestaurantsCounterService</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.RestaurantsCounterService]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.RestaurantsCounterService</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.GoodForKids</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.GoodForKids]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.GoodForKids</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.RestaurantsGoodForGroups</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.RestaurantsGoodForGroups]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.RestaurantsGoodForGroups</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.RestaurantsTableService</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.RestaurantsTableService]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.RestaurantsTableService</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stars</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[stars]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>stars</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.BusinessAcceptsBitcoin</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.BusinessAcceptsBitcoin]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.BusinessAcceptsBitcoin</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.HasTV</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.HasTV]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.HasTV</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.RestaurantsTakeOut</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.RestaurantsTakeOut]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.RestaurantsTakeOut</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>business_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[business_id]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>business_id</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hours.Sunday</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hours.Sunday]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>hours.Sunday</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.HairSpecializesIn</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.HairSpecializesIn]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.HairSpecializesIn</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hours.Saturday</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hours.Saturday]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>hours.Saturday</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.NoiseLevel</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.NoiseLevel]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.NoiseLevel</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.BYOB</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.BYOB]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.BYOB</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.ByAppointmentOnly</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.ByAppointmentOnly]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.ByAppointmentOnly</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.AcceptsInsurance</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.AcceptsInsurance]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.AcceptsInsurance</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.Caters</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.Caters]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.Caters</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hours.Thursday</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hours.Thursday]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>hours.Thursday</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.Alcohol</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.Alcohol]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.Alcohol</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.Music</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.Music]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.Music</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.DriveThru</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.DriveThru]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.DriveThru</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hours.Tuesday</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[hours.Tuesday]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>hours.Tuesday</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.BusinessParking</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.BusinessParking]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.BusinessParking</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.CoatCheck</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.CoatCheck]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.CoatCheck</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.Corkage</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.Corkage]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.Corkage</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.AgesAllowed</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.AgesAllowed]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.AgesAllowed</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.DietaryRestrictions</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.DietaryRestrictions]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.DietaryRestrictions</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.BYOBCorkage</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[attributes.BYOBCorkage]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.BYOBCorkage</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>attributes.OutdoorSeating</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[attributes.OutdoorSeating]</local-name>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias>attributes.OutdoorSeating</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[yelp_academic_dataset_business]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:BI10001:no:A1:BI10001:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Address' datatype='string' name='[address]' role='dimension' type='nominal' />
+      <column caption='Attributes' datatype='string' name='[attributes]' role='dimension' type='nominal' />
+      <column caption='Business Id' datatype='string' name='[business_id]' role='dimension' type='nominal' />
+      <column caption='Categories' datatype='string' name='[categories]' role='dimension' type='nominal' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Hours' datatype='string' name='[hours]' role='dimension' type='nominal' />
+      <column caption='Is Open' datatype='integer' name='[is_open]' role='measure' type='quantitative' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Neighborhood' datatype='string' name='[neighborhood]' role='dimension' type='nominal' />
+      <column caption='Postal Code' datatype='string' name='[postal_code]' role='dimension' type='nominal' />
+      <column caption='Review Count' datatype='integer' name='[review_count]' role='measure' type='quantitative' />
+      <column caption='Stars' datatype='real' name='[stars]' role='measure' type='quantitative' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <drill-paths>
+        <drill-path name='state, city'>
+          <field>[state]</field>
+          <field>[city]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.642857' measure-ordering='alphabetic' measure-percentage='0.357143' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Reservations'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='yelp_academic_dataset_business (business)' name='federated.1gbigui1i1tmb31dl4bql1ckvk3k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gbigui1i1tmb31dl4bql1ckvk3k'>
+            <column datatype='boolean' name='[attributes.RestaurantsReservations]' role='dimension' type='nominal' />
+            <column-instance column='[stars]' derivation='Avg' name='[avg:stars:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[attributes.RestaurantsReservations]' derivation='None' name='[none:attributes.RestaurantsReservations:nk]' pivot='key' type='nominal' />
+            <column caption='Stars' datatype='real' name='[stars]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:attributes.RestaurantsReservations:nk]</rows>
+        <cols>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[avg:stars:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Review Count'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='yelp_academic_dataset_business (business)' name='federated.1gbigui1i1tmb31dl4bql1ckvk3k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gbigui1i1tmb31dl4bql1ckvk3k'>
+            <column datatype='string' name='[attributes.WiFi]' role='dimension' type='nominal' />
+            <column-instance column='[review_count]' derivation='Count' name='[cnt:review_count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[attributes.WiFi]' derivation='None' name='[none:attributes.WiFi:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='Review Count' datatype='integer' name='[review_count]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:state:nk]' direction='DESC' using='[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[cnt:review_count:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:attributes.WiFi:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:state:nk]</rows>
+        <cols>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[cnt:review_count:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='yelp_academic_dataset_business (business)' name='federated.1gbigui1i1tmb31dl4bql1ckvk3k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gbigui1i1tmb31dl4bql1ckvk3k'>
+            <column datatype='boolean' name='[attributes.BikeParking]' role='dimension' type='nominal' />
+            <column-instance column='[stars]' derivation='Avg' name='[avg:stars:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[attributes.BikeParking]' derivation='None' name='[none:attributes.BikeParking:nk]' pivot='key' type='nominal' />
+            <column caption='Stars' datatype='real' name='[stars]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:attributes.BikeParking:nk]</rows>
+        <cols>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[avg:stars:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Stars'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='yelp_academic_dataset_business (business)' name='federated.1gbigui1i1tmb31dl4bql1ckvk3k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gbigui1i1tmb31dl4bql1ckvk3k'>
+            <column-instance column='[stars]' derivation='Avg' name='[avg:stars:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column caption='Stars' datatype='real' name='[stars]' role='measure' type='quantitative' />
+            <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:state:nk]' direction='DESC' using='[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[avg:stars:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='256' />
+                <format attr='maxwidth' value='256' />
+                <format attr='minheight' value='100' />
+                <format attr='maxheight' value='100' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:state:nk]</rows>
+        <cols>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[avg:stars:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='stars vs. count'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='yelp_academic_dataset_business (business)' name='federated.1gbigui1i1tmb31dl4bql1ckvk3k' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gbigui1i1tmb31dl4bql1ckvk3k'>
+            <column-instance column='[review_count]' derivation='Avg' name='[avg:review_count:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[stars]' derivation='None' name='[none:stars:ok]' pivot='key' type='ordinal' />
+            <column caption='Review Count' datatype='integer' name='[review_count]' role='measure' type='quantitative' />
+            <column caption='Stars' datatype='real' name='[stars]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+          </pane>
+        </panes>
+        <rows>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[avg:review_count:qk]</rows>
+        <cols>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:stars:ok]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Stars'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:state:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{49B472DE-90D0-49EC-BBE2-755F3566E2B2}' />
+    </window>
+    <window class='worksheet' name='Review Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:attributes.WiFi:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:attributes.WiFi:nk]</field>
+            <field>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:state:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4BC621D5-0A26-4213-BBCF-96A9A35A344F}' />
+    </window>
+    <window class='worksheet' name='Reservations'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:attributes.RestaurantsReservations:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{791FA0E1-CE7F-4135-A219-9024417B052F}' />
+    </window>
+    <window class='worksheet' maximized='true' name='stars vs. count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:stars:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B61D8C2F-B4D6-4790-BF01-E57779CCCC38}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1gbigui1i1tmb31dl4bql1ckvk3k].[none:attributes.BikeParking:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{17964588-5A92-4B41-B825-055D8752817E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='147' name='Reservations' width='192'>
+      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
+      RK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Review Count' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='147' name='Sheet 5' width='192'>
+      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
+      RK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Stars' width='192'>
+      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
+      VxBbSulQ93/zAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='stars vs. count' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
