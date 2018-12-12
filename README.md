@@ -5,3 +5,5 @@ Boyce Crystal, Omori Michael
 The main report is in Yelp 2018 Dataset Challenge Report.ipynb
 
 All other files were used to generate the report.
+
+Video link presentation: https://youtu.be/dtmVEyPZNro
